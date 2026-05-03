@@ -1,51 +1,29 @@
-# Team Task Manager MERN App
+# Team Task Manager
 
-Full-stack assignment project with authentication, role-based access, project management, task assignment, status tracking, and dashboard.
-
-## Tech Stack
-- React + Tailwind CSS
-- Node.js + Express
-- MongoDB + Mongoose
-- JWT Authentication
+A MERN stack Team Task Manager app with authentication, role-based access, project management, task assignment, and dashboard tracking.
 
 ## Features
 - Signup/Login
 - Admin and Member roles
-- Admin can create projects and tasks
-- Members can see assigned tasks
-- Task status: Pending, In Progress, Completed
-- Dashboard: total, completed, pending, overdue
+- Create projects
+- Add team members
+- Create and assign tasks
+- Update task status
+- Dashboard with total, completed, pending, and overdue tasks
+
+## Tech Stack
+- React
+- Node.js
+- Express.js
+- MongoDB
+- Tailwind CSS
 
 ## Run Backend
-```bash
 cd backend
 npm install
-cp .env.example .env
-npm run dev
-```
-
-Add your MongoDB URI and JWT secret in `.env`.
+node server.js
 
 ## Run Frontend
-```bash
 cd frontend
 npm install
-cp .env.example .env
 npm run dev
-```
-
-## API Routes
-- POST `/api/auth/signup`
-- POST `/api/auth/login`
-- GET `/api/auth/users` admin only
-- GET `/api/projects`
-- POST `/api/projects` admin only
-- GET `/api/tasks`
-- POST `/api/tasks` admin only
-- PUT `/api/tasks/:id/status`
-- GET `/api/tasks/dashboard`
-
-## Deployment
-Deploy backend and frontend on Railway. Set environment variables:
-- Backend: `MONGO_URI`, `JWT_SECRET`, `CLIENT_URL`
-- Frontend: `VITE_BACKEND_URL`
